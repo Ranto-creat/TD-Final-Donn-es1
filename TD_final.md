@@ -82,3 +82,5 @@ FROM commander as c
 INNER JOIN produits as p ON c.id_produit = p.id_produit GROUP BY p.nom_produit
 ORDER BY quantite_total_vendue DESC;
 ````
+
+## Exo2: Vues et index basiques
