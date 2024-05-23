@@ -1,3 +1,5 @@
+-- todo: Exo1: Function d'agregation
+
 -- Insérer des données dans la table clients
 INSERT INTO clients (id_client, nom_client, prenom_client, email_client, adress_client, numero_telephone) VALUES
 (1, 'Dupont', 'Jean', 'jean.dupont@example.com', '123 Rue Principale', '0123456789'),
