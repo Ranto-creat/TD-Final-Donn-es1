@@ -26,7 +26,7 @@ CREATE TABLE commander(
     id_client INT,
     id_produit INT,
     date_commande DATE NOT NULL,
-    Quantité INT,
+    quantite INT,
     FOREIGN KEY(id_client) REFERENCES clients(id_client),
     FOREIGN KEY(id_produit) REFERENCES produits(id_produit)
 );
