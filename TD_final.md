@@ -14,7 +14,7 @@
 
 ````sql
 INSERT INTO clients
-VALUES (15,'Rakoto','Be','RAkoto@gamil.com','Analakely 101','0384653213','Rakoto');
+VALUES (15,'Rakoto','Be','Rakoto@gamil.com','Analakely 101','0384653213','Rakoto');
 ````
 
 ````sql
@@ -23,7 +23,17 @@ VALUES (20, 'yaourt', '2.2', 'nouriture');
 ````
 
 ````sql
+INSERT INTO mode_de_payement (id_payement, payement_type) VALUES
+(1, 'M'); -- MVola = 'M'
+````
+
+````sql
 INSERT INTO commander VALUES (15, 20, CURRENT_DATE, 5);
+````
+
+````sql
+INSERT INTO choisir (id_client, id_payement) VALUES
+(15, 1);
 ````
 
 ### 3.a. Le nombre d’articles dans la base de données
