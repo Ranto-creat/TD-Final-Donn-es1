@@ -18,16 +18,16 @@ INSERT INTO mode_de_payement (id_payement, payement_type) VALUES
 
 -- Insérer des données dans la table produits
 INSERT INTO produits (id_produit, nom_produit, type_produit, prix) VALUES
-(1, 'Smartphone X', 'Électronique', 299.99),
-(2, 'Laptop Y', 'Électronique', 899.99),
-(3, 'Cafetière Z', 'Électroménager', 49.99),
-(4, 'Grille-pain W', 'Électroménager', 19.99),
-(5, 'Vélo A', 'Sport', 150.00),
-(6, 'Tapis de yoga B', 'Sport', 25.00),
-(7, 'Roman C', 'Livre', 12.50),
-(8, 'Encyclopédie D', 'Livre', 45.00),
-(9, 'Pantalon E', 'Vêtements', 35.00),
-(10, 'Chaussures F', 'Vêtements', 60.00);
+(1, 'Smartphone X', 'Électronique', 400000),
+(2, 'Laptop Y', 'Électronique', 1300000),
+(3, 'Cafetière Z', 'Électroménager', 320000),
+(4, 'Grille-pain W', 'Électroménager', 200000),
+(5, 'Vélo A', 'Sport', 550000),
+(6, 'Tapis de yoga B', 'Sport', 50000),
+(7, 'Roman C', 'Livre', 30000),
+(8, 'Encyclopédie D', 'Livre', 25000),
+(9, 'Pantalon E', 'Vêtements', 20000),
+(10, 'Chaussures F', 'Vêtements', 35000);
 
 
 -- Insérer des données dans la table livreur
