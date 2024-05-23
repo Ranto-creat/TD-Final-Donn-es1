@@ -87,7 +87,7 @@ ORDER BY quantite_total_vendue DESC;
 
 - réseau social data base : [**``reseau social``**](https://github.com/Ranto-creat/TD-Final-Don-es1/blob/main/database_reseau.sql)
 
-### Proposition de  solution pour améliorer les performances des requêtes SELECT
+### 1. Proposition de  solution pour améliorer les performances des requêtes SELECT
 
 #### L'utilisation l'indexation permettra d'accélérer la recherche et la récupération des données
 
@@ -101,7 +101,7 @@ CREATE INDEX idx_first_name ON user (first_name);
 SELECT * FROM user WHERE first_name = 'John';
 ````
 
-### Creation de ``VIEW`` à la table "user" qui affiche(nom, prenom, âge, e-mail, et le nombre de post posté)
+### 2. Creation de ``VIEW`` à la table "user" qui affiche(nom, prenom, âge, e-mail, et le nombre de post posté)
 
 ````sql
 CREATE VIEW user_publics AS
@@ -109,6 +109,7 @@ SELECT
     u.last_name,
     u.first_name,
     u.email,
+    u.age,
     COUNT(p.id) AS nombre_de_posts
 FROM 
     "user" AS u
@@ -116,4 +117,28 @@ LEFT JOIN
     post AS p ON u.id = p.user_id
 GROUP BY 
     u.id, u.last_name, u.first_name, u.date_of_birth, u.email;
+````
+
+### 3. Afficher la liste des utilisateurs qui ont moins de 20 ans qui ont déjà posté
+
+````sql
+SELECT *
+FROM user_publics
+WHERE age < 20 AND nombre_de_posts > 0;
+````
+
+### 4. Afficher la liste des utilisateurs qui ont moins de 20 ans qui ont déjà posté (Sans utiliser ``VIEW``)
+
+````sql
+SELECT 
+    u.last_name,
+    u.first_name,
+    u.age,
+    u.email,
+    COUNT(p.id) nombre_de_posts
+FROM "user" u INNER JOIN post p ON u.id = p.user_id
+GROUP BY 
+    u.id, u.last_name, u.first_name, u.date_of_birth, u.email
+HAVING 
+    age < 20 AND COUNT(p.id) > 0;
 ````
