@@ -4,11 +4,11 @@
 
 ### 1. MCD et l'implémentation dans une base de données
 
-- ``MCD image in with link``: [MCD image](https://github.com/Ranto-creat/TD-Final-Donn-es1/blob/main/MCD.png)
+- ``MCD image in with link``: [**``MCD image``**](https://github.com/Ranto-creat/TD-Final-Donn-es1/blob/main/MCD.png)
 
-- ``Creation des tables`` [All create table](https://github.com/Ranto-creat/TD-Final-Don-es1/blob/main/All_create_table.sql)
+- ``Creation des tables``: [**``All create table``**](https://github.com/Ranto-creat/TD-Final-Don-es1/blob/main/All_create_table.sql)
 
-- ``Tout les insertions``[All insert](https://github.com/Ranto-creat/TD-Final-Don-es1/blob/main/All_insert.sql)
+- ``Tout les insertions``: [**``All insert``**](https://github.com/Ranto-creat/TD-Final-Don-es1/blob/main/All_insert.sql)
 
 ### 2. Insertion de Rakoto dans la base de données
 
