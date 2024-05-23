@@ -4,12 +4,11 @@ CREATE TABLE clients(
     prenom_client VARCHAR(100) NOT NULL,
     email_client VARCHAR(100) NOT NULL,
     adress_client VARCHAR(100),
-    numero_telephone VARCHAR(15),
-    mot_de_passe VARCHAR(50)
+    numero_telephone VARCHAR(15)
 );
-CREATE TABLE commandes(
+CREATE TABLE mode_de_payement(
     id_payement INT,
-    payement_type VARCHAR(1),
+    payement_type CHAR(1) CHECK (payement_type in ('M', 'C')) 
 );
 CREATE TABLE produits(
     id_produit INT PRIMARY KEY,
@@ -39,7 +38,7 @@ CREATE TABLE choisir(
 CREATE TABLE livrer(
     id_produit INT,
     id_livreur INT,
-    date_livraison VARCHAR(50) NOT NULL,
+    date_livraison date NOT NULL,
     FOREIGN KEY(id_produit) REFERENCES produits(id_produit),
     FOREIGN KEY(id_livreur) REFERENCES livreur(id_livreur)
 );
