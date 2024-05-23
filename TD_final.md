@@ -83,7 +83,7 @@ INNER JOIN produits as p ON c.id_produit = p.id_produit GROUP BY p.nom_produit
 ORDER BY quantite_total_vendue DESC;
 ````
 
-### 3.d. Afficher le total des commandes payées pour cette année ci
+### 3.e. Afficher le total des commandes payées pour cette année ci
 
 ````sql
 SELECT SUM(produits.prix * commander.quantite) AS total_gagne
