@@ -83,6 +83,15 @@ INNER JOIN produits as p ON c.id_produit = p.id_produit GROUP BY p.nom_produit
 ORDER BY quantite_total_vendue DESC;
 ````
 
+### 3.d. Afficher le total des commandes payées pour cette année ci
+
+````sql
+SELECT SUM(produits.prix * commander.quantite) AS total_gagne
+FROM commander
+INNER JOIN produits ON commander.id_produit = produits.id_produit
+WHERE EXTRACT(YEAR FROM commander.date_commande) = EXTRACT(YEAR FROM CURRENT_DATE);
+````
+
 ## Exo2: Vues et index basiques
 
 - réseau social data base : [**``reseau social``**](https://github.com/Ranto-creat/TD-Final-Don-es1/blob/main/database_reseau.sql)
