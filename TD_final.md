@@ -63,11 +63,11 @@ SELECT
     c.quantite,
     p.prix * c.quantite AS prix_total
 FROM 
-    commander as c
+    commander c
 INNER JOIN 
-    produits as p ON c.id_produit = p.id_produit
+    produits p ON c.id_produit = p.id_produit
 INNER JOIN 
-    clients as cl ON c.id_client = cl.id_client
+    clients cl ON c.id_client = cl.id_client
 WHERE 
     cl.nom_client = 'Rakoto';
 ````
