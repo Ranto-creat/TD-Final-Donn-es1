@@ -144,7 +144,7 @@ SELECT
     u.first_name,
     u.age,
     u.email,
-    COUNT(p.id) nombre_de_posts
+    COUNT(p.id) AS nombre_de_posts
 FROM "user" u INNER JOIN post p ON u.id = p.user_id
 GROUP BY 
     u.id, u.last_name, u.first_name, u.date_of_birth, u.email
