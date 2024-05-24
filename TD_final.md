@@ -78,8 +78,8 @@ WHERE
 SELECT 
     p.nom_produit,
     SUM(c.quantite) AS quantite_total_vendue
-FROM commander as c
-INNER JOIN produits as p ON c.id_produit = p.id_produit GROUP BY p.nom_produit
+FROM commander c
+INNER JOIN produits p ON c.id_produit = p.id_produit GROUP BY p.nom_produit
 ORDER BY quantite_total_vendue DESC;
 ````
 
